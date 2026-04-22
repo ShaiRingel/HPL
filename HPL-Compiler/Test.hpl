@@ -1,0 +1,551 @@
+NOTE: ============================================================
+NOTE: Comprehensive HPL Test File
+NOTE: Tests every grammar construct, operator, and edge case
+NOTE: ============================================================
+
+NOTE: ----------------------------------------
+NOTE: 1. Variable Declarations (all types)
+NOTE: ----------------------------------------
+Let counter be number.
+Let total be number.
+Let limit be number.
+Let flag be number.
+Let result be number.
+Let greeting be text.
+Let name be text.
+Let emptyText be text.
+Let charResult be text.
+
+NOTE: ----------------------------------------
+NOTE: 2. Assignment - Set ... to
+NOTE: ----------------------------------------
+Set counter to 0.
+Set total to 100.
+Set limit to 10.
+Set flag to 1.
+Set greeting to "Hello".
+Set name to "World".
+Set emptyText to "".
+
+NOTE: ----------------------------------------
+NOTE: 3. Arithmetic assignments
+NOTE: ----------------------------------------
+Increase counter by 1.
+Increase total by 50.
+Decrease total by 25.
+Multiply counter by 3.
+Divide total by 5.
+
+NOTE: ----------------------------------------
+NOTE: 4. Expressions - additive ops
+NOTE: ----------------------------------------
+Set result to counter plus 10.
+Set result to total minus 20.
+Set result to 5 plus 3 minus 1.
+Set result to counter plus total minus limit.
+
+NOTE: ----------------------------------------
+NOTE: 5. Expressions - multiplicative ops
+NOTE: ----------------------------------------
+Set result to counter times 2.
+Set result to total divide 4.
+Set result to 3 times 5 plus 2.
+Set result to 2 plus 3 times 5.
+Set result to counter times limit divide 2.
+
+NOTE: ----------------------------------------
+NOTE: 6. Expressions - remainderOf ... dividedBy
+NOTE: ----------------------------------------
+Set result to remainderOf 17 dividedBy 5.
+Set result to remainderOf counter dividedBy 3.
+Set result to remainderOf total dividedBy limit.
+
+NOTE: ----------------------------------------
+NOTE: 7. Expressions - parenthesised
+NOTE: ----------------------------------------
+Set result to (5 plus 3) times 2.
+Set result to 10 minus (2 plus 3).
+Set result to (counter plus 1) times (limit minus 2).
+Set result to ((5 plus 3) times 2) minus 1.
+
+NOTE: ----------------------------------------
+NOTE: 8. Negative numbers
+NOTE: ----------------------------------------
+Set result to -1.
+Set result to -42 plus 50.
+Set result to 10 plus -3.
+
+NOTE: ----------------------------------------
+NOTE: 10. IO - Show (numbers and text)
+NOTE: ----------------------------------------
+Show counter.
+Show "\n".
+Show total.
+Show "\n".
+Show result.
+Show "\n".
+Show greeting.
+Show "\n".
+Show "Literal string output".
+Show "\n".
+Show counter plus 1.
+Show "\n".
+Show (counter times 2) plus 1.
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 11. IO - Get (moved to end, requires input)
+NOTE: ----------------------------------------
+NOTE: Get statements are tested at the very end since they block for input.
+NOTE: For now, simulate the result:
+Set counter to 3.
+Set name to "Tester".
+
+NOTE: ----------------------------------------
+NOTE: 12. atPosition - text indexing (1-based)
+NOTE: ----------------------------------------
+Set greeting to "ABCDE".
+Set charResult to greeting atPosition (1).
+Show charResult.
+Show "\n".
+Set charResult to greeting atPosition (5).
+Show charResult.
+Show "\n".
+Set charResult to greeting atPosition (counter plus 1).
+Show charResult.
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 13. atPosition - assignment to character
+NOTE: ----------------------------------------
+Set greeting atPosition (1) to "Z".
+Show greeting.
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 14. If / then (simple)
+NOTE: ----------------------------------------
+If counter greaterThan 0 then:
+    Show "Counter is positive".
+    Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 15. If / Otherwise (else)
+NOTE: ----------------------------------------
+If counter equalsTo 0 then:
+    Show "Counter is zero".
+    Show "\n".
+Otherwise:
+    Show "Counter is not zero".
+    Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 16. If / Otherwise if / Otherwise (else-if chain)
+NOTE: ----------------------------------------
+If counter greaterThan 100 then:
+    Show "High".
+    Show "\n".
+Otherwise if counter greaterThan 50 then:
+    Show "Medium".
+    Show "\n".
+Otherwise if counter greaterThan 0 then:
+    Show "Low".
+    Show "\n".
+Otherwise:
+    Show "Zero or negative".
+    Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 17. Relational operators (all 6)
+NOTE: ----------------------------------------
+If counter equalsTo 0 then:
+    Show "equalsTo works".
+    Show "\n".
+If counter notEqualsTo 99 then:
+    Show "notEqualsTo works".
+    Show "\n".
+If counter greaterThan -1 then:
+    Show "greaterThan works".
+    Show "\n".
+If counter lessThan 1000 then:
+    Show "lessThan works".
+    Show "\n".
+If counter atLeast 0 then:
+    Show "atLeast works".
+    Show "\n".
+If counter atMost 999 then:
+    Show "atMost works".
+    Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 18. Compound conditions - and
+NOTE: ----------------------------------------
+If counter atLeast 0 and counter atMost 100 then:
+    Show "Counter in range 0-100".
+    Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 19. Compound conditions - or
+NOTE: ----------------------------------------
+If counter equalsTo 0 or counter equalsTo 1 then:
+    Show "Counter is 0 or 1".
+    Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 20. Compound conditions - and + or combined
+NOTE: ----------------------------------------
+If counter equalsTo 0 or counter greaterThan 5 and counter lessThan 50 then:
+    Show "Complex condition passed".
+    Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 21. Negated conditions - not
+NOTE: ----------------------------------------
+If not counter equalsTo 99 then:
+    Show "Counter is not 99".
+    Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 22. Parenthesised conditions
+NOTE: ----------------------------------------
+If (counter equalsTo 0 or counter equalsTo 1) and flag equalsTo 1 then:
+    Show "Grouped condition passed".
+    Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 23. Nested if statements
+NOTE: ----------------------------------------
+If counter atLeast 0 then:
+    If counter atMost 10 then:
+        Show "Counter is 0-10".
+        Show "\n".
+    Otherwise:
+        Show "Counter is above 10".
+        Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 24. Repeat loop
+NOTE: ----------------------------------------
+Set counter to 0.
+Repeat 5 iterations:
+    Increase counter by 1.
+    Show counter.
+    Show "\n".
+Show "After repeat loop".
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 25. Repeat with expression
+NOTE: ----------------------------------------
+Set limit to 3.
+Repeat limit iterations:
+    Show "Looping".
+    Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 26. While loop
+NOTE: ----------------------------------------
+Set counter to 5.
+While counter greaterThan 0:
+    Show counter.
+    Show "\n".
+    Decrease counter by 1.
+Show "While loop done".
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 27. While with compound condition
+NOTE: ----------------------------------------
+Set counter to 0.
+Show "Hello".
+While counter lessThan 10 and flag equalsTo 1:
+    Increase counter by 1.    
+
+NOTE: ----------------------------------------
+NOTE: 28. Nested loops
+NOTE: ----------------------------------------
+Set counter to 0.
+Repeat 3 iterations:
+    Repeat 2 iterations:
+        Increase counter by 1.
+Show counter.
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 29. Loop with if inside
+NOTE: ----------------------------------------
+Set counter to 0.
+Repeat 10 iterations:
+    Increase counter by 1.
+    If remainderOf counter dividedBy 2 equalsTo 0 then:
+        Show "Even".
+        Show "\n".
+    Otherwise:
+        Show "Odd".
+        Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 30. Function declaration (no parameters)
+NOTE: ----------------------------------------
+To sayHello with nan:
+    Show "Hello from function!".
+    Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 31. Function call (no arguments)
+NOTE: ----------------------------------------
+sayHello with (nan).
+
+NOTE: ----------------------------------------
+NOTE: 32. Function with one parameter
+NOTE: ----------------------------------------
+To doubleIt with x:
+    Let result be number.
+    Set result to x times 2.
+    Return result.
+
+Set result to doubleIt with (5).
+Show result.
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 33. Function with multiple parameters
+NOTE: ----------------------------------------
+To addThree with a, b, c:
+    Return a plus b plus c.
+
+Set result to addThree with (10, 20, 30).
+Show result.
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 34. Function with local variables
+NOTE: ----------------------------------------
+To computeArea with width, height:
+    Let area be number.
+    Set area to width times height.
+    Return area.
+
+Set result to computeArea with (6, 7).
+Show result.
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 35. Function with conditional logic
+NOTE: ----------------------------------------
+To absValue with n:
+    If n lessThan 0 then:
+        Set n to 0 minus n.
+    Return n.
+
+Set result to absValue with (-42).
+Show result.
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 36. Function with loop
+NOTE: ----------------------------------------
+To factorial with n:
+    Let acc be number.
+    Set acc to 1.
+    While n greaterThan 1:
+        Multiply acc by n.
+        Decrease n by 1.
+    Return acc.
+
+Set result to factorial with (5).
+Show result.
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 37. Function calling another function
+NOTE: ----------------------------------------
+To tripleIt with x:
+    Return x times 3.
+
+To doubleThenTriple with x:
+    Let res be number.
+    Set res to doubleIt with (x).
+    Set res to tripleIt with (res).
+    Return res.
+
+Set result to doubleThenTriple with (4).
+Show result.
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 38. Recursive function
+NOTE: ----------------------------------------
+To fibonacci with n:
+    If n atMost 1 then:
+        Return n.
+    Return fibonacci with (n minus 1) plus fibonacci with (n minus 2).
+
+Set result to fibonacci with (10).
+Show result.
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 39. Function with text parameter
+NOTE: ----------------------------------------
+To greet with who:
+    Show "Hello, ".
+    Show who.
+    Show "!".
+    Show "\n".
+
+greet with ("HPL").
+
+NOTE: ----------------------------------------
+NOTE: 40. Function with IO
+NOTE: ----------------------------------------
+To askAndDouble with nan:
+    Let val be number.
+    Set val to 21.
+    Return val times 2.
+
+Set result to askAndDouble with (nan).
+Show result.
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 41. Function returning text
+NOTE: ----------------------------------------
+To makeGreeting with first, last:
+    Show first.
+    Show " ".
+    Show last.
+    Show "\n".
+
+makeGreeting with ("John", "Doe").
+
+NOTE: ----------------------------------------
+NOTE: 42. Void function (no return)
+NOTE: ----------------------------------------
+To printBanner with nan:
+    Show "====================".
+    Show "\n".
+    Show "   HPL Test Suite   ".
+    Show "\n".
+    Show "====================".
+    Show "\n".
+
+printBanner with (nan).
+
+NOTE: ----------------------------------------
+NOTE: 43. Complex expression as function argument
+NOTE: ----------------------------------------
+Set result to doubleIt with ((3 plus 4) times 2).
+Show result.
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 44. Multiple statements in block
+NOTE: ----------------------------------------
+If 1 equalsTo 1 then:
+    Let temp be number.
+    Set temp to 42.
+    Increase temp by 8.
+    Show temp.
+    Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 45. Deeply nested blocks
+NOTE: ----------------------------------------
+Set counter to 5.
+If counter greaterThan 0 then:
+    If counter greaterThan 2 then:
+        If counter greaterThan 4 then:
+            Show "Deeply nested: counter > 4".
+            Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 46. Long elif chain
+NOTE: ----------------------------------------
+Set counter to 3.
+If counter equalsTo 1 then:
+    Show "One".
+    Show "\n".
+Otherwise if counter equalsTo 2 then:
+    Show "Two".
+    Show "\n".
+Otherwise if counter equalsTo 3 then:
+    Show "Three".
+    Show "\n".
+Otherwise if counter equalsTo 4 then:
+    Show "Four".
+    Show "\n".
+Otherwise if counter equalsTo 5 then:
+    Show "Five".
+    Show "\n".
+Otherwise:
+    Show "Other".
+    Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 47. Expression in Show
+NOTE: ----------------------------------------
+Show 2 plus 3 times 4.
+Show "\n".
+Show (2 plus 3) times 4.
+Show "\n".
+Show remainderOf 100 dividedBy 7.
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 48. Chained string concatenation in Show
+NOTE: ----------------------------------------
+Set name to "HPL".
+Show "Language: ".
+Show name.
+Show " v1.0".
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 49. Stress test - many variables
+NOTE: ----------------------------------------
+Let v1 be number.
+Let v2 be number.
+Let v3 be number.
+Let v4 be number.
+Let v5 be number.
+Set v1 to 1.
+Set v2 to 2.
+Set v3 to 3.
+Set v4 to 4.
+Set v5 to 5.
+Set result to v1 plus v2 plus v3 plus v4 plus v5.
+Show result.
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 50. Final comprehensive test
+NOTE: ----------------------------------------
+To sumRange with low, high:
+    Let s be number.
+    Set s to 0.
+    While low atMost high:
+        Increase s by low.
+        Increase low by 1.
+    Return s.
+
+Set result to sumRange with (1, 100).
+Show result.
+Show "\n".
+
+Show "All non-interactive tests complete.".
+Show "\n".
+
+NOTE: ----------------------------------------
+NOTE: 51. IO - Get (interactive, runs last)
+NOTE: ----------------------------------------
+Get number ask "Enter a number: " storeInto counter.
+Show counter.
+Show "\n".
+Get text ask "Enter your name: " storeInto name.
+Show "Hello, ".
+Show name.
+Show "!".
+Show "\n".
+Show "All tests complete.".
+Show "\n".

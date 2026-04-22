@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="HPL-Compiler/HPL-Compiler.vcxproj" Id="8069d006-7150-4012-baf6-3598050d1fd3" />
+</Solution>

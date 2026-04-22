@@ -1,0 +1,39 @@
+Let guess be number.
+Let num be number.
+Let tries be number.
+Let txt be text.
+
+Set num to 65.
+Set guess to -1.
+Set tries to 5.
+
+While guess notEqualsTo num and tries greaterThan 0:
+	Show "Make a guess (you have ".
+	Show tries.
+	Show " tries left): ".
+	Get number ask "" storeInto guess.
+	Show "\n".
+	While guess lessThan 0 or guess greaterThan 100:
+		Set txt to "Guess should be between 0-100, try again: ".
+		Show txt.
+		Get number ask "" storeInto guess.
+		Show "\n".
+	
+	If guess equalsTo num then:
+		Set txt to "Correct, You got it exactly!\n\n".
+	Otherwise if guess lessThan num then:
+		Set txt to "The number is greater than your guess\n\n".
+	Otherwise:
+		Set txt to "The number is lower than your guess\n\n".
+	
+	Decrease tries by 1.
+	Show txt.
+
+If num equalsTo guess then:
+	Show "You had ".
+	Show tries.
+	Show " guesses remaining.".
+Otherwise:
+	Show "The number was: ".
+	Show num.
+	Show "\nGood luck next time!".

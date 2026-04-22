@@ -1,0 +1,18 @@
+To calculateFibo with n:
+	If n atMost 1 then:
+		Return 0.
+	Otherwise if n equalsTo 2 then:
+		Return 1.
+	
+	Return calculateFibo with (n minus 1) plus calculateFibo with (n minus 2).
+
+Let num be number.
+Set num to 1.
+
+Get number ask "Enter a number:" storeInto num.
+While num greaterThan 0:
+	Show calculateFibo with (num).
+	Show "\n".
+	Get number ask "Enter a number:" storeInto num.
+
+Show "Finished Program :D".

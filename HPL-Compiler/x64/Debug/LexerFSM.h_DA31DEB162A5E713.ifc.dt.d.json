@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\shair\\source\\repos\\hpl-compiler\\hpl-compiler\\lexerfsm.h",
+        "ProvidedModule": "",
+        "Includes": [
+            "c:\\users\\shair\\source\\repos\\hpl-compiler\\hpl-compiler\\transitiontable.h",
+            "c:\\users\\shair\\source\\repos\\hpl-compiler\\hpl-compiler\\global.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

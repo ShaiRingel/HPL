@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Debug\\ScopeTree.h.obj",
+            "outputs": [
+                "C:\\Users\\shair\\source\\repos\\HPL\\HPL-Compiler\\x64\\Debug\\vc145.pdb",
+                "x64\\Debug\\",
+                "C:\\Users\\shair\\source\\repos\\HPL\\HPL-Compiler\\x64\\Debug\\ScopeTree.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "ScopeTree.h",
+                    "source-path": "c:\\users\\shair\\source\\repos\\hpl\\hpl-compiler\\scopetree.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

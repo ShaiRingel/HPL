@@ -1,0 +1,3 @@
+Let num be number.
+
+Get number ask "Enter:" storeInto num atPosition 1.

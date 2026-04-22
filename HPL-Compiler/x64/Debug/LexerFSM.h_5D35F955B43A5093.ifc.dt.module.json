@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Debug\\LexerFSM.obj",
+            "outputs": [
+                "x64\\Debug\\LexerFSM.h_5D35F955B43A5093.ifc.dt.module.json",
+                "x64\\Debug\\LexerFSM.h_5D35F955B43A5093.ifc.dt.d.json",
+                "x64\\Debug\\LexerFSM.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "C:\\Users\\shair\\source\\repos\\HPL\\HPL-Compiler\\LexerFSM.h",
+                    "source-path": "c:\\users\\shair\\source\\repos\\hpl\\hpl-compiler\\lexerfsm.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+Let a be number.
+Let b be number.
+Let c be number.
+Let d be number.
+Let e be number.
+Let f be number.
+Let g be number.
+Let h be number.
+Let result be number.
+
+Set a to 1.
+Set b to 2.
+Set c to 3.
+Set d to 4.
+Set e to 5.
+Set f to 6.
+Set g to 7.
+Set h to 8.
+
+Set result to ((a plus b) times (c plus d)) plus ((e plus f) times (g plus h)).
+Show result.

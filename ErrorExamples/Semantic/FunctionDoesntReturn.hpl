@@ -1,0 +1,6 @@
+Let i be number.
+
+To getName with nan:
+	Show "Hello".
+
+Set i to getName with (nan).

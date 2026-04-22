@@ -1,0 +1,6 @@
+Let num be number.
+
+If num greaterThan 5 then:
+	Show "big".
+Otherwise
+	Show "small".

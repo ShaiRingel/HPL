@@ -1,0 +1,6 @@
+Let num be number.
+
+Set num to 5.
+
+If num equalsTo "hello" then:
+	Show "equal".

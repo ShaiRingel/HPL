@@ -1,0 +1,4 @@
+To getCount with nan:
+	Return 1.
+
+Increase getCount by 1.

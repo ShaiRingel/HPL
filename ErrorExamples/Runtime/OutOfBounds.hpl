@@ -1,0 +1,5 @@
+Let txt be text.
+
+Set txt to "Hello World!".
+
+Show txt atPosition 20.

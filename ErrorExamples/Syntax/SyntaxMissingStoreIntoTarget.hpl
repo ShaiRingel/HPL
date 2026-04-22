@@ -1,0 +1,3 @@
+Let name be text.
+
+Get text ask "Enter name:" storeInto.

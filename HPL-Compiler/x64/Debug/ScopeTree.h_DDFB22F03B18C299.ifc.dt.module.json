@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Debug\\ScopeTree.obj",
+            "outputs": [
+                "x64\\Debug\\ScopeTree.h_DDFB22F03B18C299.ifc.dt.module.json",
+                "x64\\Debug\\ScopeTree.h_DDFB22F03B18C299.ifc.dt.d.json",
+                "x64\\Debug\\ScopeTree.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "C:\\Users\\shair\\source\\repos\\HPL\\HPL-Compiler\\ScopeTree.h",
+                    "source-path": "c:\\users\\shair\\source\\repos\\hpl\\hpl-compiler\\scopetree.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

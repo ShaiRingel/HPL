@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Lexer">
+      <UniqueIdentifier>{b56a65e1-8420-47a4-986c-5afaf292aa26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Parser">
+      <UniqueIdentifier>{fe3a894f-aabd-4da8-be00-25f80a49d498}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lexer">
+      <UniqueIdentifier>{27fd440e-3a1d-49f3-a6c4-da6ced9c31a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Parser">
+      <UniqueIdentifier>{5bc43fa0-4f89-44f4-939c-4fc318448f94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Semantic">
+      <UniqueIdentifier>{293d3fce-22f9-4c1c-84e6-934bfd1b2c77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Semantic">
+      <UniqueIdentifier>{5054076f-cf9f-4207-ae5a-5cf269f7fc2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ErrorHandler">
+      <UniqueIdentifier>{8d9541c8-c03e-42f5-8b33-2e82ccbcc1e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ErrorHandler">
+      <UniqueIdentifier>{ee4fd5cc-fbf1-46fc-af8f-bebcb8bd6306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Errors">
+      <UniqueIdentifier>{a695bbf0-a453-4d62-8752-6e6dab20ac83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Errors\Lexical">
+      <UniqueIdentifier>{4b2395a2-2c2a-48ba-82de-3fb016de3962}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Errors\Semantic">
+      <UniqueIdentifier>{57eef003-a282-4dcc-b305-40993e197ff7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CodeGenerator">
+      <UniqueIdentifier>{9ae0ed40-2678-4285-b51b-69f2e78b9a2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CodeGenerator">
+      <UniqueIdentifier>{2c4b34fe-2aa1-4322-9412-a23dc4db3da1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Errors\Syntax">
+      <UniqueIdentifier>{97a7c239-414b-475f-9ebe-987845c3d086}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Errors\Runtime">
+      <UniqueIdentifier>{2515b26a-dc29-48ec-bd85-efd63721eb06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HPL grammar.bnf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Main.hpl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="TestLexer.hpl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Test.hpl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Lexical\IdNotStartWithLetter.hpl">
+      <Filter>Resource Files\Errors\Lexical</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Lexical\IdTooLong.hpl">
+      <Filter>Resource Files\Errors\Lexical</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Lexical\InconsistentIndent.hpl">
+      <Filter>Resource Files\Errors\Lexical</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Lexical\InvalidChar.hpl">
+      <Filter>Resource Files\Errors\Lexical</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Lexical\MaxIndentDepth.hpl">
+      <Filter>Resource Files\Errors\Lexical</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Runtime\GotTextInsteadOfNumber.hpl">
+      <Filter>Resource Files\Errors\Runtime</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Runtime\OutOfBounds.hpl">
+      <Filter>Resource Files\Errors\Runtime</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Semantic\AtPositionOnNonText.hpl">
+      <Filter>Resource Files\Errors\Semantic</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Semantic\ConditionEqualityMismatch.hpl">
+      <Filter>Resource Files\Errors\Semantic</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Semantic\ConditionNumericOperator.hpl">
+      <Filter>Resource Files\Errors\Semantic</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Semantic\FunctionAsVariable.hpl">
+      <Filter>Resource Files\Errors\Semantic</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Semantic\FunctionCall.hpl">
+      <Filter>Resource Files\Errors\Semantic</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Semantic\FunctionDoesntReturn.hpl">
+      <Filter>Resource Files\Errors\Semantic</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Semantic\FunctionUsedAsVar.hpl">
+      <Filter>Resource Files\Errors\Semantic</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Semantic\IncDecNonNumber.hpl">
+      <Filter>Resource Files\Errors\Semantic</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Semantic\NotAFunction.hpl">
+      <Filter>Resource Files\Errors\Semantic</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Semantic\ReturnOutsideFunction.hpl">
+      <Filter>Resource Files\Errors\Semantic</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Semantic\ReturnTypeMismatch.hpl">
+      <Filter>Resource Files\Errors\Semantic</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Semantic\UndeclaredIdentifier.hpl">
+      <Filter>Resource Files\Errors\Semantic</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Semantic\AlreadyDeclared.hpl">
+      <Filter>Resource Files\Errors\Semantic</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Semantic\ArithmeticTypeMismatch.hpl">
+      <Filter>Resource Files\Errors\Semantic</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Semantic\AssignmentTypeMismatch.hpl">
+      <Filter>Resource Files\Errors\Semantic</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingBe.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingBy.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingCloseParen.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingColonAfterOtherwise.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingColonAfterThen.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingColonRepeat.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingColonWhile.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingCondition.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingDividedBy.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingDot.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingExpression.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingFuncName.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingIdentAfterLet.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingIndentedBlock.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingIterations.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingMulDiv.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingOpenParen.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingRelOp.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingStoreInto.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingStoreIntoTarget.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingThen.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingTo.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingType.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingValueAfterOperator.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingWithInCall.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingWithInDecl.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxUnclosedConditionGroup.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxUnclosedParen.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxInvalidAfterIfBlock.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingAnd.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingAsk.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+    <None Include="..\ErrorExamples\Syntax\SyntaxMissingAtPositionIndex.hpl">
+      <Filter>Resource Files\Errors\Syntax</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Compiler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Lexer.h">
+      <Filter>Header Files\Lexer</Filter>
+    </ClInclude>
+    <ClInclude Include="Parser.h">
+      <Filter>Header Files\Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="ParsingStack.h">
+      <Filter>Header Files\Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="TransitionTable.h">
+      <Filter>Header Files\Lexer</Filter>
+    </ClInclude>
+    <ClInclude Include="CST.h">
+      <Filter>Header Files\Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="SymbolTable.h">
+      <Filter>Header Files\Semantic</Filter>
+    </ClInclude>
+    <ClInclude Include="SemanticAnalyzer.h">
+      <Filter>Header Files\Semantic</Filter>
+    </ClInclude>
+    <ClInclude Include="ParsingDefinitions.h">
+      <Filter>Header Files\Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="HashingFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParsingTable.h">
+      <Filter>Header Files\Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorHandler.h">
+      <Filter>Header Files\ErrorHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeGenerator.h">
+      <Filter>Header Files\CodeGenerator</Filter>
+    </ClInclude>
+    <ClInclude Include="DispatchTable.h">
+      <Filter>Header Files\Semantic</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Compiler.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LexerFSM.h">
+      <Filter>Header Files\Lexer</Filter>
+    </ClCompile>
+    <ClCompile Include="LexerFSM.c">
+      <Filter>Source Files\Lexer</Filter>
+    </ClCompile>
+    <ClCompile Include="Lexer.c">
+      <Filter>Source Files\Lexer</Filter>
+    </ClCompile>
+    <ClCompile Include="TransitionTable.c">
+      <Filter>Source Files\Lexer</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser.c">
+      <Filter>Source Files\Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="ParsingStack.c">
+      <Filter>Source Files\Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="CST.c">
+      <Filter>Source Files\Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="SymbolTable.c">
+      <Filter>Source Files\Semantic</Filter>
+    </ClCompile>
+    <ClCompile Include="SemanticAnalyzer.c">
+      <Filter>Source Files\Semantic</Filter>
+    </ClCompile>
+    <ClCompile Include="ScopeTree.h">
+      <Filter>Header Files\Semantic</Filter>
+    </ClCompile>
+    <ClCompile Include="ScopeTree.c">
+      <Filter>Source Files\Semantic</Filter>
+    </ClCompile>
+    <ClCompile Include="ParsingTable.c">
+      <Filter>Source Files\Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorHandler.c">
+      <Filter>Source Files\ErrorHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeGenerator.c">
+      <Filter>Source Files\CodeGenerator</Filter>
+    </ClCompile>
+    <ClCompile Include="DispatchTable.c">
+      <Filter>Source Files\Semantic</Filter>
+    </ClCompile>
+    <ClCompile Include="HashingFunctions.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

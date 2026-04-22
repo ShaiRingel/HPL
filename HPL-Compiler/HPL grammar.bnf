@@ -1,0 +1,99 @@
+<program> ::= <statement_list>
+
+<block> ::= <INDENT> <statement_list> <DEDENT>
+
+<statement_list> ::= <statement>
+                   | <statement_list> <statement>
+
+<statement> ::= <variable_declaration>
+              | <assignment_statement>
+              | <io_statement>
+              | <control_flow_statement>
+              | <function_declaration>
+              | <function_return>
+              | <function_call_statement>
+
+<variable_declaration> ::= "Let" <identifier> "be" <type> "."
+
+<type> ::= "number"
+         | "text"
+
+<assignment_statement> ::= "Set" <lvalue> "to" <expression> "."
+                         | "Increase" <lvalue> "by" <expression> "."
+                         | "Decrease" <lvalue> "by" <expression> "."
+                         | "Multiply" <lvalue> "by" <expression> "."
+                         | "Divide" <lvalue> "by" <expression> "."
+
+<lvalue> ::= <identifier>
+           | <identifier> "atPosition" <factor>
+
+<io_statement> ::= "Show" <expression> "."
+                 | "Get" <type> "ask" <string_literal> "storeInto" <lvalue> "."
+
+<control_flow_statement> ::= <if_statement>
+                           | <loop_statement>
+
+<if_statement> ::= "If" <condition> "then" ":" <block> <elif_list>
+
+<elif_list> ::= "Otherwise" "if" <condition> "then" ":" <block> <elif_list>
+              | <else_part>
+
+<else_part> ::= "Otherwise" ":" <block>
+              | <empty>
+
+<loop_statement> ::= "Repeat" <expression> "iterations" ":" <block>
+                   | "While" <condition> ":" <block>
+
+<function_declaration> ::= "To" <identifier> "with" <parameter_list> ":" <block>
+                         | "To" <identifier> "with" "nan" ":" <block>
+
+<parameter_list> ::= <identifier>
+                   | <parameter_list> "," <identifier>
+
+<function_return> ::= "Return" <expression> "."
+
+<function_call_statement> ::= <function_call> "."
+
+<function_call> ::= <identifier> "with" "(" <argument_list> ")"
+                  | <identifier> "with" "(" "nan" ")"
+
+<argument_list> ::= <expression>
+                  | <argument_list> "," <expression>
+
+<expression> ::= <expression> <additive_op> <term>
+               | <term>
+
+<term> ::= <term> <multiplicative_op> <factor>
+         | "remainderOf" <factor> "dividedBy" <factor>
+         | <factor>
+
+<factor> ::= <lvalue>
+           | <function_call>
+           | <number_literal>
+           | <string_literal>
+           | "(" <expression> ")"
+
+<condition> ::= <condition> "or" <bool_term>
+              | <bool_term>
+
+<bool_term> ::= <bool_term> "and" <bool_factor>
+              | <bool_factor>
+
+<bool_factor> ::= <expression> <relational_op> <expression>
+                | "not" <bool_factor>
+                | "(" <condition> ")"
+
+<additive_op> ::= "plus"
+                | "minus"
+
+<multiplicative_op> ::= "times"
+                      | "divide"
+
+<relational_op> ::= "equalsTo"
+                  | "notEqualsTo"
+                  | "greaterThan"
+                  | "lessThan"
+                  | "atLeast"
+                  | "atMost"
+
+<empty> ::=

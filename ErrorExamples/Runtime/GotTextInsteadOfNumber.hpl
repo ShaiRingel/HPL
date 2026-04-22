@@ -1,0 +1,3 @@
+Let i be number.
+
+Get number ask "Please, input a text instead of a number:" storeInto i.

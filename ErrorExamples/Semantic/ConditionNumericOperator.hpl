@@ -1,0 +1,6 @@
+Let name be text.
+
+Set name to "Alice".
+
+If name greaterThan "Bob" then:
+	Show "greater".

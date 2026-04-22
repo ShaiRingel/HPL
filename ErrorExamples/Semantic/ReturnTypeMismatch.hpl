@@ -1,0 +1,5 @@
+To calculate with a, b:
+	If a greaterThan b then:
+		Return a.
+	Otherwise:
+		Return "Hello".

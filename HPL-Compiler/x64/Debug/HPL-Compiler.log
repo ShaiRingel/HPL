@@ -1,0 +1,37 @@
+﻿  Scanning sources for module dependencies...
+  LexerFSM.h
+  ScopeTree.h
+  Compiling...
+  ScopeTree.h
+  LexerFSM.h
+  CodeGenerator.c
+  CST.c
+C:\Users\shair\source\repos\HPL\HPL-Compiler\CodeGenerator.h(8,9): warning C4005: 'STD_INPUT_HANDLE': macro redefinition
+  (compiling source file 'CodeGenerator.c')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winbase.h(819,9):
+      see previous definition of 'STD_INPUT_HANDLE'
+  
+C:\Users\shair\source\repos\HPL\HPL-Compiler\CodeGenerator.h(9,9): warning C4005: 'STD_OUTPUT_HANDLE': macro redefinition
+  (compiling source file 'CodeGenerator.c')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winbase.h(820,9):
+      see previous definition of 'STD_OUTPUT_HANDLE'
+  
+  Compiler.c
+  DispatchTable.c
+  ErrorHandler.c
+  HashingFunctions.c
+C:\Users\shair\source\repos\HPL\HPL-Compiler\HashingFunctions.c(11,33): warning C4028: formal parameter 1 different from declaration
+  Lexer.c
+  LexerFSM.c
+  Main.c
+  Parser.c
+  ParsingStack.c
+  ParsingTable.c
+  ScopeTree.c
+  SemanticAnalyzer.c
+  SymbolTable.c
+C:\Users\shair\source\repos\HPL\HPL-Compiler\SymbolTable.c(54,20): warning C4047: 'function': 'char' differs in levels of indirection from 'const char *'
+C:\Users\shair\source\repos\HPL\HPL-Compiler\SymbolTable.c(54,20): warning C4024: 'hashChar': different types for formal and actual parameter 1
+  TransitionTable.c
+  Generating Code...
+  HPL-Compiler.vcxproj -> C:\Users\shair\source\repos\HPL\x64\Debug\HPL-Compiler.exe
